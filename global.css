@@ -115,3 +115,15 @@ a{
 	margin: 10px 20px 0px 20px;
 	color: rgb(188 146 147);
 }
+
+.guest-label{
+	font-size: 2em;
+}
+
+.guest-select{
+	font-size: 2em;
+}
+
+.rsvp-form{
+	display: flex;
+}

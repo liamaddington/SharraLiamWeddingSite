@@ -18,8 +18,8 @@ async function loadRSVP() {
 	const form = document.getElementById("guests");
 	data.guests.forEach(guest => {
 		form.innerHTML += `
-			<label>${guest.name}</label>
-			<select name="${guest.name}">
+			<label class="guest-label">${guest.name}</label>
+			<select class="guest-select" name="${guest.name}">
 				<option value="">Select</option>
 				<option value="yes">Yes</option>
 				<option value="no">No</option>
