@@ -17,6 +17,7 @@ body{
 	width: auto;
 	color: rgb(66 86 123);
 	font-size: 15px;
+	margin-bottom: 300px;
 }
 
 .image-container {
@@ -126,4 +127,13 @@ a{
 
 .rsvp-form{
 	display: flex;
+	flex-direction: column;
+    align-items: center;
+}
+
+.guest-submit{
+	background-color:rgb(188 146 147);
+	border-radius: 10px;
+	font-size: 2.5em;
+	width: 50%;
 }
