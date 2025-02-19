@@ -23,10 +23,10 @@ async function loadRSVP() {
 		form.innerHTML += `
 			<label style="padding-right: 40px;" class="guest-label">${guest.name}</label>
 			<label class="guest-label">
-            	<input class="radio-rsvp" type="radio" name="${guest.name}" value="Yes" ${guest.response === 'Yes' ? 'checked' : ''} required> Yes
+            	<input class="radio-rsvp" type="radio" name="${guest.name}" value="Accept" ${guest.response === 'Accept' ? 'checked' : ''} required> Accept
         	</label>
         	<label class="guest-label">
-        	    <input class="radio-rsvp" type="radio" name="${guest.name}" value="No" ${guest.response === 'No' ? 'checked' : ''}> No
+        	    <input class="radio-rsvp" type="radio" name="${guest.name}" value="Regretfully Decline" ${guest.response === 'Regretfully Decline' ? 'checked' : ''}> Regretfully Decline
         	</label>
 			<br><br>
 		`;
