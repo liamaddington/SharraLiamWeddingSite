@@ -47,14 +47,14 @@ body{
 
 .nav-container {
 	display: flex;
-	justify-content: center;
-	text-align: center;
-	
-	font-size: 1.5em;
+    justify-content: space-evenly;
+    text-align: center;
+    font-size: 2em;
+    width: 100%;
 }
 
 .nav-container href {
-	padding: 1.5em;
+	padding: 2em;
 }
 
 .timeline-container{
@@ -70,7 +70,10 @@ h1{
 	/* font-family: 'Raqillas-GOGdy'; */
 	font-style: italic;
 	margin-block-end: 0.1em;
+	margin-top: 20px;
+	background: #f5dedf;
 }
+
 h2 {
 	text-align: center;
 	font-size: 2.0em;
@@ -79,6 +82,7 @@ h2 {
 p{
 	text-align: center;
     font-size: 2.5em;
+	margin: 0px;
 }
 .text-container{
 	text-align: center;
@@ -109,7 +113,10 @@ p{
 	background-color:rgb(188 146 147);
 	border-radius: 10px;
 	font-size: 2.5em;
-	width: 100%;
+	width: 40%;
+    color: #331926;
+    text-align: center;
+	text-decoration:none;
 }
 
 a{
@@ -132,8 +139,35 @@ a{
 }
 
 .guest-submit{
-	background-color:rgb(188 146 147);
-	border-radius: 10px;
-	font-size: 2.5em;
+	background-color: rgb(188 146 147);
+    font-size: 2.5em;
+    width: 50%;
+    color: #331926;
+}
+
+.separator {
 	width: 50%;
+	text-align: center;
+	border-bottom: 1px solid #d5cec0;
+	margin-top: 30px; 
+}
+
+.seperator-container{
+	display: flex;
+	justify-content: center;
+}
+
+.radio-rsvp{
+	height: 20px;
+    width: 20px;
+}
+
+.entourage-container{
+	display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.entourage-container div{
+	padding: 0px 10px;
 }

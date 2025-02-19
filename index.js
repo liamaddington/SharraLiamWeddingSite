@@ -16,14 +16,19 @@ async function loadRSVP() {
 
 	document.getElementById("household").innerText = `RSVP for ${data.householdName}`;
 	const form = document.getElementById("guests");
+
+	document.getElementById("guestCount").innerHTML = `${data.guests.length} seat${data.guests.length > 1 ? "s" : ""}`;
+
 	data.guests.forEach(guest => {
 		form.innerHTML += `
-			<label class="guest-label">${guest.name}</label>
-			<select class="guest-select" name="${guest.name}">
-				<option value="">Select</option>
-				<option value="yes">Yes</option>
-				<option value="no">No</option>
-			</select><br><br>
+			<label style="padding-right: 40px;" class="guest-label">${guest.name}</label>
+			<label class="guest-label">
+            	<input class="radio-rsvp" type="radio" name="${guest.name}" value="Yes" ${guest.response === 'Yes' ? 'checked' : ''} required> Yes
+        	</label>
+        	<label class="guest-label">
+        	    <input class="radio-rsvp" type="radio" name="${guest.name}" value="No" ${guest.response === 'No' ? 'checked' : ''}> No
+        	</label>
+			<br><br>
 		`;
 	});
 
@@ -35,8 +40,8 @@ async function submitRSVP() {
 	const guid = urlParams.get("guid");
 
 	const responses = {};
-	document.querySelectorAll("#guests select").forEach(select => {
-		responses[select.name] = select.value;
+	document.querySelectorAll("input[type=radio]:checked").forEach(input => {
+		responses[input.name] = input.value;
 	});
 
 	await fetch("https://sharraliam-wedding-site-ckdtccgbeyd7ahem.southeastasia-01.azurewebsites.net/api/SubmitRSVP", {
